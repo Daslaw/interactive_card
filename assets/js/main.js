@@ -37,14 +37,13 @@ cardNumberInput.addEventListener("keyup", (e) => {
   let cardNumberValue = cardNumberInput.value;
   let key = e.key;
   let keyNumbers = key.match(/^[0-9]*$/);
-  if (cardNumberValue.length === 7) {
+  if (cardNumberValue.length === 0) {
     cardNumberError.innerHTML = "Please enter your card number!";
   } else if (keyNumbers) {
     cardNumberBox.innerHTML = cardNumberValue;
   } else if (key === "Backspace") {
     cardNumberInput.setAttribute("enabled", "");
   } else {
-    cardNumberInput.setAttribute("disabled", "");
     cardNumberError.innerHTML = "Please use only numbers!";
   }
 });

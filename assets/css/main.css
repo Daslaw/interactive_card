@@ -158,6 +158,10 @@ input:focus {
     .card-number {
         font-size: 18px;
     }
+
+    .design {
+        position: fixed;
+    }
 }
 
 /* 420px */

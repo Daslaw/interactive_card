@@ -31,11 +31,13 @@ cardholderNameInput.addEventListener("keyup", (e) => {
     cardNameError.innerHTML = "Please use only letters!";
   }
 });
+
+
 cardNumberInput.addEventListener("keyup", (e) => {
   let cardNumberValue = cardNumberInput.value;
   let key = e.key;
-  let keyNumbers = key.match(/^[0-9 ]*$/);
-  if (cardNumberValue.length === 0) {
+  let keyNumbers = key.match(/^[0-9]*$/);
+  if (cardNumberValue.length === 7) {
     cardNumberError.innerHTML = "Please enter your card number!";
   } else if (keyNumbers) {
     cardNumberBox.innerHTML = cardNumberValue;
@@ -49,7 +51,7 @@ cardNumberInput.addEventListener("keyup", (e) => {
 cardNumberInput.addEventListener("input", (e) => {
   e.target.value = e.target.value = e.target.value
     .replace(/[^\dA-Z]/g, "")
-    .replace(/(.{4})/g, "$1 ")
+    .replace(/(.{10})/g, "$1 ")
     .trim();
 });
 cardExpMonth.addEventListener("input", (e) => {

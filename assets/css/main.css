@@ -171,4 +171,8 @@ input:focus {
     .cvc {
         top: 40%;
     }
+
+    .design {
+        position: fixed;
+    }
 }
